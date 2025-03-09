@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>achiversacademy</title>
+<link rel="stylesheet" href="bootstrap-5.3.1-dist/css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width, initial scale=1.0">
+<style>
+    .upr{
+        top: 0;
+        z-index: 9999;        
+        position: sticky;
+    }
+    .head{
+        background-color: whitesmoke;
+        margin-top: 0px;
+        color: black;
+        display: flex;
+    }
+    .body{
+        margin: 0px;
+        scroll-behavior: smooth;
+        padding: 0px;
+        font-family: calibri;
+        background-color: whitesmoke;
+        cursor: pointer;
+    }
+    li{
+        padding: 10px;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    .h3{
+        text-align: center;
+        margin: 0px;
+    }
+    .box{
+        margin-bottom: 30px;
+    }
+    .box0{
+        padding-right: 10px;
+        padding-left: 20px;
+        line-height: 20px;
+    }
+    .box1{
+        border-right: 1px solid white;
+        padding-right: 120px;
+        line-height: 20px;
+    }
+    .box2{
+        height: 150px;
+        width: 250px;
+        margin-left: 55px;
+        margin-bottom: 40px;
+        border-radius: 4px;
+        transition: all 0.5s ease-in-out;
+        overflow: auto;
+    }
+    .box3{
+        padding-right: 50px;
+        padding-left: 20px; 
+    }
+    .box4{
+        padding-top: 20px;
+        padding-right: 90px;
+        padding-left: 170px;        
+    }
+    .box5{
+        padding-top: 20px;
+        padding-right: 50px;
+        padding-left: 140px;
+    }
+    .box2:hover{
+        transform: scale(1.2);
+    }
+    .form{
+        margin-left: 40px;
+        border-radius: 5px;
+        background-color: rgb(2, 68, 95);
+        margin-right: 40px;
+        margin-bottom: 50px;
+    }
+    input{
+        border: none;
+        border-radius: 4px;
+        width: 1135px;
+        margin-left: 20px;
+        margin-right: 20px;
+        margin-top: 15px;
+        height: 40px;
+    }
+    .button2{
+        border: none;
+        font-size: 18px;
+        border-radius: 4px;
+        margin-bottom: 20px;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        background-color: orangered;
+    }
+    .clr{
+        color: black;
+        text-decoration: none;
+    }
+    .clr:hover{
+        color: orange;
+        border-bottom: 2px solid orange;
+        transition: 0.1s all ease-in-out;
+    }
+    .pic1{
+        background-image: url('images/1.jpg');
+        height: 600px;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+    .pic2{
+        background-image: url('images/2.jpg');
+        height: 600px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+    .pic3{
+        background-image: url('images/3.jpg');
+        height: 600px;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: 100%;
+    }
+    .abc{
+        padding-top: 170px;
+        line-height: 2px;
+        font-weight: bold;
+        font-size: 60px;
+        margin-left: 320px;
+        color: white;
+    }
+    .abc1{
+        padding-top: 194px;
+        line-height: 2px;
+        font-weight: bold;
+        font-size: 60px;
+        margin-left: 260px;
+        color: white;
+    }
+    .abc2{
+        padding-top: 200px;
+        line-height: 2px;
+        font-weight: bold;
+        font-size: 60px;
+        margin-left: 350px;
+        color: white;
+    }
+    .para1{
+        text-align: center;
+        color: white;
+        font-size: 23px;
+        font-family: gill sans mt;
+    }
+    .para2{
+        text-align: center;
+        color: white;
+        font-size: 23px;
+        font-family: gill sans mt;        
+        line-height: 10px;
+    }
+    .button{
+        margin-left: 430px;
+        border-radius: 2px;
+        border: none;
+        background-color: orangered;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+    .button:hover{
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+    }
+    .button1{
+        margin-left: 18px;
+        border: 1px solid white;
+        border-radius: 2px;
+        height: 50px;
+        width: 200px;
+        background-color: transparent;
+        color: white;
+    }
+    .button1:hover{
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+    }
+    .button3{
+        margin-left: 445px;
+        border-radius: 2px;
+        border: none;
+        background-color: orangered;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+    .button3:hover{
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+    }
+    .button4{
+        margin-left: 18px;
+        border: 1px solid white;
+        border-radius: 2px;
+        height: 50px;
+        width: 200px;
+        background-color: transparent;
+        color: white;
+    }
+    .button4:hover{
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+    }
+    .button5{
+        margin-left: 445px;
+        border-radius: 2px;
+        border: none;
+        background-color: orangered;
+        color: white;
+        height: 50px;
+        width: 200px;
+    }
+    .button5:hover{
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+    }
+    .button6{
+        margin-left: 18px;
+        border: 1px solid white;
+        border-radius: 2px;
+        height: 50px;
+        width: 200px;
+        background-color: transparent;
+        color: white;
+    }
+    .button6:hover{
+        background-color: white;
+        color: black;
+        transition: 0.5s all ease-in-out;
+    }
+    .tea{
+        margin-bottom: 1px;
+    }
+    .a{
+        background-color: plum;
+        height: 400px;
+    }
+    .img{
+        border-radius: 50%;
+        height: 100px;
+        width: 100px;
+        margin-left: 585px;
+        margin-top: 50px;
+    }
+    .carousel-indicators .active{
+        background-color: #010412;
+    }
+    .text{
+        margin-top: 0px;
+        font-size: 25px;
+        text-align:center;
+    }
+</style>
+<script src="bootstrap-5.3.1-dist/js/bootstrap.min.js">
+      
+</script>
+</head>
+<body class="body">
+    <div style="display: flex;color: white;background-color: #02165c;padding-left: 100px;height:30px;
+    font-size: 14px;font-weight: lighter;margin-bottom: 0px;">
+        <div style="padding-right: 10px;padding-top: 6px;">Mail: info@achiversacademy.ind.in</div>
+        <div style="border-left: 1px solid white;border-right:1px solid white;padding-right: 10px;
+        padding-left: 10px;padding-top: 6px;">
+        Phone: +91 - 9654108195</div>
+        <div style="background-color: orangered;padding: 5px;margin-left: 600px;">Ask For Admission</div>
+    </div>
+    <div class="upr">
+        <div class="head">
+            <p style="font-size: 18px;margin-left: 100px;font-family: arial black;word-spacing: 0%;padding-top: 28px;">ACHIEVERS ACADEMY</p>
+            <ul type="none" style="display: flex;margin-left: 390px;padding-top: 18px;">
+                <li><a href="#" class="clr">Home</a></li>
+                <li><a href="#" class="clr">About us</a></li>
+                <li><a href="#" class="clr">All Pages</a></li>
+                <li><a href="#" class="clr">Gallery</a></li>
+                <li><a href="#" class="clr">Contact us</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="box">
+
+        <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="pic1">
+                    <div style="display: flex;"><p class="abc">WELCOME TO</p>
+                    <p style="color: orangered;padding-top: 170px;font-weight: bold;font-size: 60px;
+                    padding-left:12px;line-height: 2px;">ACHIVERS </p>
+                    </div>
+                    <p style="color: orangered;;font-weight: bold;font-size: 60px;text-align: center;padding-top: 0px;">
+                    ACADEMY</p>
+                    <p class="para1">Join Prestigious Civil Services preparation Institute to become a 
+                    successful IAS officer</p>
+                    <div style="display: flex;">
+                    <button class="button">ALL COURSES</button>
+                    <button class="button1">READ MORE</button>
+                    </div>
+                </div>
+              </div>
+              <div class="carousel-item">
+                <div class="pic2">
+                <div style="display: flex;"><p class="abc1">CURRENT </p>
+                <p style="color: orangered;padding-top: 150px;font-weight: bold;font-size: 60px;
+                padding-left:12px;">AFFAIRS MATERIALS</p>
+                </div>
+                <p class="para2">Read our enriched Current Affairs content with detailed analysis along with</p>
+                <p class="para2">MCQ test and special feature article every month.</p>
+                <br>
+                <div style="display: flex;">
+                    <button class="button3">ADMISSION</button>
+                    <button class="button4">READ MORE</button>
+                </div>
+              </div>
+              </div>
+              <div class="carousel-item">
+                <div class="pic3">
+                <div style="display: flex;"><p class="abc2">CLASSROOM</p> 
+                <p style="color: orangered;padding-top: 155px;font-weight: bold;font-size: 60px;
+                padding-left:12px;">COURSES</p>
+                </div>
+                <p class="para2">Join class room courses for interactive classroom lectures and better understanding</p>
+                <p class="para2">of concepts.</p>
+                <br>
+                <div style="display: flex;">
+                    <button class="button5">ALL COURSES</button>
+                    <button class="button6">READ MORE</button>
+                </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+          </div>
+
+    </div>
+    <div style="padding-left: 450px;display:flex;font-size: 20px;"><h1>About</h1>
+    <h1 style="color: orangered;padding-left: 10px;">ACHIEVERS ACADEMY</h1></div>
+    <div style="margin-left: 70px;margin-right: 70px;"><p class="text">Dear students, A warm welcome to ACADEMY an ISO certified institute provide best coaching for 
+    IAS PCS SSC IPS IRS. Over last 10 year we emerge one of the best institute in whole Ghaziabad with a 
+    vision to be centre of excellence and mission to develop innovative future officers . Your preparation 
+    start with being regular for every class , being in step with faculty ,reading news paper daily . We 
+    firstly focus on general studies then on optional subject because optional subject need focus and time 
+    to understand.The process of preparation is about 2 years.
+    <br>
+    We do not believe in just passing exam preparation tips to aspirents ,but we provide best coaching 
+    mathadology to students to help them better succed in UPSC UPPSC SSC CGL....We also provide coaching for 
+    UPPCS ,Bank RPSC MPPSC,BPSC .....Our results show that in all these exams we became one of the best study 
+    centre in whole India.
+    <br>
+    Our simple , practical and focused approach will help aspirants understand the demand of UPSC exam 
+    effectively.Our strategy is to constantly innovate to keep the preparation process dynamic and give 
+    individual attention to each students.
+    </p>    
+    <h3 class="h3">N K Sharma (Director)</h3>
+    <h3 class="h3" style="margin-bottom: 50px;">ACHIEVERS ACADEMY</h3>
+</div>
+    <div style="padding-left: 500px;display:flex;font-size: 20px;">
+        <h1>Our Main</h1>
+    <h1 style="color: orangered;padding-left: 10px;padding-bottom: 30px;">Courses</h1>
+    </div>
+    <div style="display: flex;margin-bottom: 50px;">
+    <div><img src="images/ias_ips.jpg" alt="pic1" class="box2"></div>
+    <div><img src="images/UPPCS.jpg" alt="pic2" class="box2"></div>
+    <div><img src="images/CGL.jpg" alt="pic3" class="box2"></div>
+    <div><img src="images/dc.jpg" alt="pic4" class="box2"></div>
+    </div>
+    <div class="form">
+        <form>
+            <h2 style="color: white;padding-left: 20px;padding-top: 30px;
+            padding-bottom: 30px;margin: 0px;">Lets Know About You</h2>
+            <div style="background-color: lightgrey;border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;"><h3 style="text-align: center;font-weight: lighter;padding-top: 25px;">DETAILS SUBMIT BELOW</h3>
+            <input type="text" placeholder="Full name"><br>
+            <input type="email" placeholder="Email id"><br>
+            <input type="number" placeholder="Phone Number"><br>
+            <input type="text" placeholder="Address"><br>
+            <input type="submit" value="SUBMIT" class="button2"><br></div>
+        </form>
+    </div>
+
+    <div>
+    <div style="padding-left: 500px;display:flex;font-size: 20px;">
+        <h1>News and</h1>
+    <h1 style="color: orangered;padding-left: 10px;padding-bottom: 30px;">Events</h1>
+    </div>
+    <h5 style="padding-left: 570px;">PHOTO GALLERY</h5>
+    <hr style="size: 2px;color: black;"><br>
+    <div style="display: flex;">
+        <img src="images/4.jpg" alt="ck1" height="400px" width="300px" style="margin-left: 140px;margin-bottom: 50px;">
+        <img src="images/5.jpg" alt="ck2" height="400px" width="300px" style="margin-left: 40px;margin-bottom: 50px;">
+        <img src="images/6.jpg" alt="ck3" height="400px" width="300px" style="margin-left: 40px;margin-bottom: 50px;">
+    </div>
+    <div style="display: flex;">
+        <img src="images/7.jpg" alt="ck4" height="400px" width="300px" style="margin-left: 140px;">
+        <img src="images/8.jpg" alt="ck5" height="400px" width="300px" style="margin-left: 40px;">
+        <img src="images/9.jpg" alt="ck6" height="400px" width="300px" style="margin-left: 40px;margin-bottom: 60px;">
+    </div>
+    </div>
+
+    <div class="tea">
+        <div id="carouselExampleIndicators" class="carousel slide">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="a">
+                <img src="images/lmn.jpg" alt="lmn" class="img">
+                <br><br>
+            <div style="line-height: 2px;">
+            <p style="text-align: center;">
+                <i>"thnks team achievers academy for brighten my future as psc officer, I joined here in 2019 
+                batch with some doubt that can make it or not but through the</i>
+            </p>
+            <p style="text-align: center;">
+                <i>proper guidance that I can easily crack the exam in single attempt."</i>
+            </p>
+            <p style="text-align: center;color: blue;">Chandan Rajput</p>
+            <p style="text-align: center;">UPPCS 2020</p>
+        </div>
+        </div>
+          </div>
+          <div class="carousel-item">
+            <div class="a">
+                <img src="images/opq.jpg" alt="lmn" class="img">
+                <br><br>
+            <div style="line-height: 2px;">
+            <p style="text-align: center;">
+                <i>"upsc in unpredictable in nature in complexity, since I was in my office so I can't join but 
+                through proper online classes I easily improve my</i>
+            </p>
+            <p style="text-align: center;">
+                <i>score in exam."</i>
+            </p>
+            <p style="text-align: center;color: blue;">Deepanshu Grover</p>
+            <p style="text-align: center;">UPPCS 2020</p>
+        </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="a">
+                <img src="images/rst.jpg" alt="lmn" class="img">
+                <br><br>
+            <div style="line-height: 2px;">
+            <p style="text-align: center;">
+                <i>"thank u team achievers for boosting my success, being a working professional it was tough 
+                for me to crack the exam, but with your guidance it could be</i>
+            </p>
+            <p style="text-align: center;">
+                <i>possible."</i>
+            </p>
+            <p style="text-align: center;color: blue;">Sakshi Singh</p>
+            <p style="text-align: center;">SSC 2020</p>
+        </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+    <div style="background-color: #040f38;color: white;font-size: 14px;">
+    <div style="padding-left: 100px;;padding-right: 100px;padding-top: 100px;padding-bottom: 30px;"><hr></div>
+    <div style="display: flex;padding-left: 100px;">
+        <div class="box1"><h5>GET IN TOUCH</h5><br>Address: 319, Shakti Khand 3, Near Sai Chowk, <br>Indirapuram, Ghaziabad <br><br>
+        Phone: +91-9654108195, +91-8527870414<br><br>Email: info@achiversacademy.ind.in
+        </div> 
+        <div class="box0">
+            <div style="border-right: 1px solid white;">
+                <h5>NEW COURSE</h5>
+                <div style="display: flex;">
+                <br>IAS <br>CGL
+                <div class="box4">UPPCS<br>BANKING</div>
+                </div>
+            </div>
+        </div>
+        <div class="box3"><h5>HELP & SUPPORT</h5>
+            <div style="display: flex;">
+            <br>24x7 Live Help <br>Feedback <br>Safety
+        <div class="box5">Contact us <br>FAQs</div>
+            </div>
+        </div>
+    </div>
+    <div style="padding-left: 100px;;padding-right: 100px;padding-top: 30px;padding-bottom: 40px;"><hr></div>
+    <div style="background-color: #010412;color: darkgray;"><h5 style="padding-left: 100px;font-weight: 
+    lighter;">GROW ON SOLUTIONS</h5></div>    
+</div>
+</body>
+</html>
